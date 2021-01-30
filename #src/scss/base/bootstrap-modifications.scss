@@ -1,6 +1,7 @@
 .btn {
   font-weight: 700;
   &-primary {
+    text-transform: uppercase;
     width: 300px;
     height: 50px;
     border-radius: 10px;
@@ -8,5 +9,34 @@
     align-items: center;
     justify-content: center;
     box-shadow: inset -1px -1px 4px rgba(0,0,0,.5);
+    @media (max-width: $breakpoint-md) {
+      width: 240px;
+    }
+  }
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1280px
+) !default;
+
+.form-control {
+  padding: 0.5rem .75rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $redColor;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $redColor;
+}
+
+.container {
+  @media (max-width: $breakpoint-lg) {
+    max-width: 100%;
   }
 }

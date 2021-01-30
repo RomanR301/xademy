@@ -23,6 +23,9 @@
       align-items: center;
       justify-content: center;
       padding: 0;
+      border-radius: 4px;
+      text-transform: unset;
+      box-shadow: unset;
     }
   }
   &-main {
@@ -32,6 +35,10 @@
     }
     & .nav-item {
       padding: 0 20px;
+      @media (max-width: $breakpoint-lg) {
+        padding: 0;
+        margin: 10px 0;
+      }
       &:last-child {
         padding-right: 0;
       }
@@ -51,6 +58,9 @@
         bottom: 0;
         left: 0;
         @include transition(.3);
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
       &:hover {
         &:before {

@@ -1,3 +1,56 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.footer {
+  height: 80px;
+  background: $yellowColor;
+  position: relative;
+  @media (max-width: $breakpoint-md) {
+    height: 60px;
+  }
+  & .container, & .row {
+    height: 100%;
+  }
+  &-copyright {
+    font-size: 24px;
+    color: $redColor;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 18px;
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 16px;
+    }
+  }
+  &-button {
+    position: absolute;
+    bottom: 0;
+    right: 12%;
+    width: 80px;
+    height: 110px;
+    background: $redColor;
+    cursor: pointer;
+    @media (max-width: $breakpoint-md) {
+      right: 20px;
+      width: 70px;
+      height: 80px;
+    }
+    & span {
+      display: block;
+      color: #fff;
+      font-size: 40px;
+      transform: translate(0, 0) rotate(-90deg);
+      padding-left: 20px;
+      @include transition(.3);
+    }
+    &:hover {
+      & span {
+        transform: translate(0, -8px) rotate(-90deg);
+      }
+    }
+  }
+}

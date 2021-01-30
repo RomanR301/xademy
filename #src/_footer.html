@@ -1,9 +1,40 @@
 <footer class="footer">
-  <!-- FOOTER -->
+  <div class="container">
+    <div class="row">
+      <div class="footer-inner">
+        <div class="footer-copyright">
+          © x-academy 2020
+        </div>
+        <div onclick="scrollToTop()" class="footer-button">
+          <span>></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="js/libs.min.js"></script>
-<script src="js/script.min.js"></script>
+
+<script>
+  function scrollToTop() {
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+  }
+
+  function scrollIt(element) {  
+  window.scrollTo({
+    'behavior': 'smooth',
+    'left': 0,
+    'top': element.offsetTop
+    });
+  }
+  const btns = document.querySelectorAll('.scroll-to-contact');
+  const sections = document.querySelectorAll('.contact');
+
+  btns[0].addEventListener('click', () => {
+    scrollIt(sections[0]);
+  });
+</script>
 
 </body>
+
 </html>

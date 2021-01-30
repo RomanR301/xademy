@@ -12734,6 +12734,14 @@ fieldset:disabled .btn {
     padding: 30px;
   }
 
+  .info-row.info-row-no-image .info-row__inner .info-text:first-child {
+    padding: 30px;
+  }
+
+  .info-row.info-row-no-image .info-row__inner .info-text:last-child {
+    padding: 30px;
+  }
+
   .info-text {
     padding: 30px;
   }

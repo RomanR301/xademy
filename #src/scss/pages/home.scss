@@ -194,6 +194,9 @@
           @media (min-width: 2000px) {
             padding: 80px 90px 80px 20%;
           }
+          @media (max-width: $breakpoint-xl) {
+            padding: 30px;
+          }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;
             text-align: center;
@@ -210,6 +213,9 @@
           text-align: right;
           @media (min-width: 2000px) {
             padding: 80px 20% 80px 90px;
+          }
+          @media (max-width: $breakpoint-xl) {
+            padding: 30px;
           }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;

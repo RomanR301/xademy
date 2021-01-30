@@ -26,31 +26,5 @@
       font-size: 16px;
     }
   }
-  &-button {
-    position: absolute;
-    bottom: 0;
-    right: 12%;
-    width: 80px;
-    height: 110px;
-    background: $redColor;
-    cursor: pointer;
-    @media (max-width: $breakpoint-md) {
-      right: 20px;
-      width: 70px;
-      height: 80px;
-    }
-    & span {
-      display: block;
-      color: #fff;
-      font-size: 40px;
-      transform: translate(0, 0) rotate(-90deg);
-      padding-left: 20px;
-      @include transition(.3);
-    }
-    &:hover {
-      & span {
-        transform: translate(0, -8px) rotate(-90deg);
-      }
-    }
-  }
 }
+

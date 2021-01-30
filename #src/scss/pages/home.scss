@@ -127,15 +127,20 @@
         }
       }
       & .info-text {
-        padding: 150px 15% 150px 90px;
+        padding: 50px 15% 50px 90px;
+        text-align: right;
         @media (min-width: 2000px) {
-          padding: 150px 20% 150px 90px;
+          padding: 80px 20% 80px 90px;
         }
         @media (max-width: $breakpoint-xl) {
           padding: 30px;
         }
         @media (max-width: $breakpoint-lg) {
           padding: 30px 15px;
+          text-align: center;
+        }
+        & a {
+          margin-left: auto;
         }
       }
     }
@@ -182,22 +187,39 @@
           flex-direction: column;
         }
         & .info-text:first-child {
+          // padding: 50px 90px 50px 15%;
           padding: 50px 90px 50px 15%;
           background: $orangeColor;
-          @media (max-width: $breakpoint-xxl) {
-            padding: 50px;
+          text-align: left;
+          @media (min-width: 2000px) {
+            padding: 80px 90px 80px 20%;
           }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;
+            text-align: center;
+          }
+          & .btn {
+            margin: 0 auto 0 0;
+            @media (max-width: $breakpoint-lg) {
+              margin: 0 auto;
+            }
           }
         }
         & .info-text:last-child {
           padding: 50px 15% 50px 90px;
-          @media (max-width: $breakpoint-xxl) {
-            padding: 50px;
+          text-align: right;
+          @media (min-width: 2000px) {
+            padding: 80px 20% 80px 90px;
           }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;
+            text-align: center;
+          }
+          & .btn {
+            margin: 0 0 0 auto;
+            @media (max-width: $breakpoint-lg) {
+              margin: 0 auto;
+            }
           }
         }
       }
@@ -329,9 +351,9 @@
 
 
 .scroll-to-contact.btn {
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 90%;
+  top: calc(50% - 90px);
   background: $redColor;
   box-shadow: none;
   width: unset;
@@ -343,13 +365,58 @@
   padding: 0;
   font-size: 17px;
   transform: rotate(180deg);
+  z-index: 101;
   @media (max-width: $breakpoint-lg) {
     font-size: 16px;
+    top: 200px;
+    // display: none;
+    position: absolute;
+    top: 400px;
   }
   @media (max-width: $breakpoint-md) {
     font-size: 14px;
     height: 160px;
     width: 36px;
-    top: 80%;
+    // top: 80%;
   }
+}
+
+
+.scrollToTopBtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 70px;
+  height: 100px;
+  background: $redColor;
+  position: fixed;
+  bottom: 0;
+  right: 12%;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease;
+  outline: none;
+  @media (max-width: $breakpoint-lg) {
+    position: absolute;
+    right: 5%;
+  }
+  & span {
+    display: block;
+    color: #fff;
+    font-size: 40px;
+    transform: translate(0, 0) rotate(-90deg);
+    padding-left: 20px;
+    @include transition(.3);
+  }
+  &:hover {
+    & span {
+      transform: translate(0, -8px) rotate(-90deg);
+    }
+  }
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
 }

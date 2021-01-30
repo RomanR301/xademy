@@ -1,0 +1,12 @@
+.btn {
+  font-weight: 700;
+  &-primary {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -1px -1px 4px rgba(0,0,0,.5);
+  }
+}

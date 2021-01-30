@@ -1,4 +1,4 @@
-@import "./bootstrap/bootstrap.scss";
+
 
 
 // abstracts
@@ -37,7 +37,6 @@
 
 // layout 
 @import "./layout/grid.scss";
-@import "./layout/header.scss";
 @import "./layout/footer.scss";
 
 // Vendor
@@ -46,3 +45,10 @@
 
 // pages 
 @import "./pages/home.scss";
+
+
+@import "./bootstrap/bootstrap.scss";
+
+
+@import "./layout/header.scss";
+@import "./base/bootstrap-modifications.scss"

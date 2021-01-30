@@ -1,3 +1,107 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+.main-screen {
+  height: 605px;
+  background: url('../img/main-screen-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .btn {
+      border: 3px solid $whiteColor;
+      &:hover {
+        border: 3px solid $whiteColor;
+      }
+    }
+  }
+  &__illustration {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+}
 
+.about {
+  padding: 25px 0 70px 0;
+  & .row {
+    text-align: center
+  }
+  &-icon {
+    width: 270px;
+    margin: 0 auto 0px auto;
+  }
+  &-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: $redColor;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  &-description {
+    color: $greyColor;
+    width: 80%;
+    margin: 0 auto 80px auto;
+  }
+  & .btn {
+    margin: 0 auto;
+  }
+}
+
+.info {
+  &-row {
+    background: $orangeColor;
+    height: 600px;
+    position: relative;
+    @media (min-width: 2000px) {
+      height: 700px;
+    }
+    &:nth-child(even) {
+      background: $yellowColor;
+      & .info-row__inner {
+        flex-direction: row-reverse;
+      }
+      & .info-text {
+        padding: 150px 15% 150px 90px;
+        @media (min-width: 2000px) {
+          padding: 150px 20% 150px 90px;
+        }
+      }
+    }
+    &__inner {
+      display: flex;
+    }
+  }
+  &-text {
+    width: 55%;
+    padding: 150px 90px 150px 15%;
+    @media (min-width: 2000px) {
+      padding: 150px 90px 150px 20%;
+    }
+    & h2 {
+      font-family: 'PermanentMarker';
+      font-size: 40px;
+      color: $redColor;
+      margin-bottom: 0;
+    }
+    & p {
+      margin-bottom: 60px;
+      font-size: 21px;
+    }
+  }
+  &-image {
+    width: 45%;
+    & img {
+      object-position: left;
+      @include defaultIcon(cover);
+    }
+  }
+}

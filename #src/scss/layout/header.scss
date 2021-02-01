@@ -47,15 +47,17 @@
       color: $redColor;
       font-size: 18px;
       padding: 0;
+      display: flex;
+      align-items: center;
       position: relative;
       &:before {
         content: '';
         background: $redColor;
         width: 100%;
         opacity: 0;
-        height: 2px;
+        height: 5px;
         position: absolute;
-        bottom: 0;
+        bottom: -18px;
         left: 0;
         @include transition(.3);
         @media (max-width: $breakpoint-lg) {
@@ -67,11 +69,28 @@
           opacity: 1;
         }
       }
+      & span {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        background: $redColor;
+        color: $whiteColor;
+        font-size: 16px;
+        border-radius: 100%;
+      }
     }
   }
 }
 
 @media (min-width: 992px) {
+  .navbar {
+    padding: 0;
+  }
   .navbar-expand-lg .navbar-nav .nav-link {
     padding: 0;
   }

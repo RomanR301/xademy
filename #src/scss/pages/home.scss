@@ -278,7 +278,7 @@
     }
     & p {
       margin-bottom: 60px;
-      font-size: 21px;
+      font-size: 18px;
       @media (max-width: $breakpoint-xl) {
         font-size: 16px;
         margin-bottom: 30px;
@@ -425,4 +425,53 @@
 .showBtn {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+// second page
+
+.widgets {
+  margin-bottom: 150px;
+  @media (max-width: $breakpoint-lg) {
+    margin: 0 30px 70px 30px;
+  }
+  @media (max-width: $breakpoint-md) {
+    margin: 0 0 50px 0;
+  }
+  &__inner {
+    background: #e4e4e4;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    @media (max-width: $breakpoint-lg) {
+      min-height: 300px;
+    }
+    & p {
+      color: #737373;
+      text-align: center;
+      font-size: 30px;
+      line-height: 1.3;
+      @media (max-width: $breakpoint-lg) {
+        font-size: 20px;
+      }
+    }
+  }
+  &__title {
+    font-family: 'BalloonBT', sans-serif;
+    line-height: 1.3;
+    font-size: 40px;
+    color: $redColor;
+    margin: 50px 0;
+    text-align: center;
+    @media (max-width: $breakpoint-xl) {
+      font-size: 32px;
+      margin: 30px 0;
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 26px;
+    }
+  }
 }

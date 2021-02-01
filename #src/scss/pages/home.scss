@@ -190,7 +190,7 @@
           // padding: 50px 90px 50px 15%;
           padding: 50px 90px 50px 15%;
           background: $orangeColor;
-          text-align: left;
+          text-align: center;
           @media (min-width: 2000px) {
             padding: 80px 90px 80px 20%;
           }
@@ -199,18 +199,18 @@
           }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;
-            text-align: center;
+            // text-align: center;
           }
           & .btn {
-            margin: 0 auto 0 0;
+            margin: 0 auto;
             @media (max-width: $breakpoint-lg) {
-              margin: 0 auto;
+              // margin: 0 auto;
             }
           }
         }
         & .info-text:last-child {
           padding: 50px 15% 50px 90px;
-          text-align: right;
+          text-align: center;
           @media (min-width: 2000px) {
             padding: 80px 20% 80px 90px;
           }
@@ -219,12 +219,12 @@
           }
           @media (max-width: $breakpoint-lg) {
             padding: 30px 15px;
-            text-align: center;
+            // text-align: center;
           }
           & .btn {
-            margin: 0 0 0 auto;
+            margin: 0 auto;
             @media (max-width: $breakpoint-lg) {
-              margin: 0 auto;
+              // margin: 0 auto;
             }
           }
         }

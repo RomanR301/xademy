@@ -682,7 +682,7 @@ input[type=number] {
 
 .info-text p {
   margin-bottom: 60px;
-  font-size: 18px;
+  font-size: 21px;
 }
 
 .info-image {
@@ -842,6 +842,77 @@ input[type=number] {
   color: #d02052;
   margin: 50px 0;
   text-align: center;
+}
+
+.player {
+  padding: 40px 0;
+}
+
+.player__inner {
+  min-height: 400px;
+  background: #e4e4e4;
+  width: 100%;
+}
+
+body.page-with-background {
+  background: #fcf4e4;
+}
+
+.page-background {
+  position: absolute;
+  width: 100%;
+  height: 1100px;
+  background: url("../img/third-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+main.page-with-background {
+  max-width: 962px;
+  margin: 0 auto;
+}
+
+main.page-with-background .player .container {
+  padding: 0;
+}
+
+main.page-with-background .info {
+  margin-bottom: 0;
+}
+
+main.page-with-background .contact {
+  padding: 110px 0;
+  margin: 0;
+  background: #ffffff;
+}
+
+main.page-with-background .main-screen__logo img {
+  display: block;
+  width: 100%;
+}
+
+main.page-with-background .info-row {
+  height: 400px;
+}
+
+main.page-with-background .info-row:nth-child(even) .info-text {
+  padding: 60px;
+}
+
+main.page-with-background .info-text {
+  padding: 60px;
+  width: 60%;
+}
+
+main.page-with-background .info-image {
+  width: 40%;
+}
+
+main.page-with-background .info-image img {
+  -o-object-position: unset;
+     object-position: unset;
 }
 
 /*!
@@ -12932,7 +13003,7 @@ fieldset:disabled .btn {
   }
 
   .info-text p {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 30px;
   }
 
@@ -13108,6 +13179,27 @@ fieldset:disabled .btn {
 
   .widgets__title {
     font-size: 26px;
+  }
+
+  .player__inner {
+    min-height: 300px;
+  }
+
+  .player .row {
+    margin: 0;
+  }
+
+  main.page-with-background .info-row:nth-child(even) .info-text {
+    padding: 30px 15px;
+  }
+
+  main.page-with-background .info-row {
+    height: unset;
+  }
+
+  main.page-with-background .info-text {
+    width: 100%;
+    padding: 30px 15px;
   }
 
   .header-main .nav-item {

@@ -278,9 +278,9 @@
     }
     & p {
       margin-bottom: 60px;
-      font-size: 18px;
+      font-size: 21px;
       @media (max-width: $breakpoint-xl) {
-        font-size: 16px;
+        font-size: 18px;
         margin-bottom: 30px;
       }
     }
@@ -472,6 +472,93 @@
     }
     @media (max-width: $breakpoint-lg) {
       font-size: 26px;
+    }
+  }
+}
+
+
+// Third page
+
+.player {
+  padding: 40px 0;
+  &__inner {
+    min-height: 400px;
+    background: #e4e4e4;
+    width: 100%;
+    @media (max-width: $breakpoint-lg) {
+      min-height: 300px;
+    }
+  }
+  & .row {
+    @media (max-width: $breakpoint-lg) {
+      margin: 0;
+    }
+  }
+}
+
+body.page-with-background {
+  background: #fcf4e4;
+
+}
+
+.page-background {
+  position: absolute; 
+  width: 100%;
+  height: 1100px;
+  background: url('../img/third-page-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+main.page-with-background {
+  max-width: 962px;
+  margin: 0 auto;
+  & .player {
+    & .container {
+      padding: 0;
+      @media (max-width: $breakpoint-lg) {
+       
+      }
+    }
+  }
+  & .info {
+    margin-bottom: 0;
+  }
+  & .contact {
+    padding: 110px 0;
+    margin: 0;
+    background: $whiteColor;
+  }
+  & .main-screen__logo img {
+    display: block;
+    width: 100%;
+  }
+  & .info-row {
+    height: 400px;
+    &:nth-child(even) .info-text {
+      padding: 60px;
+      @media (max-width: $breakpoint-lg) {
+        padding: 30px 15px;
+      }
+    }
+    @media (max-width: $breakpoint-lg) {
+      height: unset;
+    }
+  }
+  & .info-text {
+    padding: 60px;
+    width: 60%;
+    @media (max-width: $breakpoint-lg) {
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+  & .info-image {
+    width: 40%;
+    & img {
+      object-position: unset;
     }
   }
 }
